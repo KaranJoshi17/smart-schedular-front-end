@@ -17,6 +17,7 @@
                 padding: 10px;
                 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
                 z-index: 1000;
+                right: 0;
             }
             ul  
             {
@@ -26,8 +27,9 @@
             }
             section 
             {
-                padding: 100px 20px;
-                height: 100vh;
+                padding-top: 120px;
+                padding-bottom: 120px;
+                min-height: auto;
             }
         
         </style>
@@ -36,17 +38,115 @@
         <div class="menu">
             <ul>
                 <li class="logo"><h1>Prioritize</h1></li>
-                <li><h3>Home</h3></li>
-                <li><h3>Log Out</h3></li>
+                <ul>
+                    <li><a href="#Home"> Home </a></li>
+                    <li><a href="#Tasks "> Tasks </a></li>
+                    <li><a href="#Schedule"> Schedule </a></li>
+                    <li><a href= "#Tools"> Tools </a></li>
+                    <li><a>Log Out</a></li>
+                </ul>
             </ul>
         </div>
-        <div class="hero">
-            <h1>Generate optimized study plans</h1>
-            <p>
-            Get personalized recommendations based on your deadlines, grade
-            weights, difficulty levels, and availability.
-            </p>
-        </div>
+
+        <section id="Home">
+            <div class="hero">
+                <h1>Generate optimized study plans</h1>
+                <p>
+                Get personalized recommendations based on your deadlines, grade
+                weights, difficulty levels, and availability.
+                </p>
+            </div> 
+            
+        </section>
+
+        <section id="Tasks">
+            <div class="task-card">
+                <h2> User Task Management </h2>
+                <div class="task-button-row">
+                    <button class="create-task-button">+Create Task </button>
+                    <button class="delete-task-button">-Delete Task </button>
+                    <button class="edit-task-button">Edit Task</button> 
+                </div>
+                <table class="task-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Task</th>
+                            <th>Deadline</th>
+                            <th>Grade Weight</th>
+                            <th>Difficulty</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Assignment1</td>
+                            <td>September 5</td>
+                            <td>50%</td>
+                            <td>Medium</td>
+                        </tr>
+                
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Read Chapter 5</td>
+                            <td>September 10</td>
+                            <td>5%</td>
+                            <td>Easy</td>
+                        </tr>
+                
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Review Notes</td>
+                            <td>September 15</td>
+                            <td>15%</td>
+                            <td>Hard</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="generate-container">
+                    <a href="#Schedule" class="generate-link">
+                        <button class="generate-btn">Generate Schedule</button>
+                    </a>
+                </div>
+                
+            </div>
+            
+        </section>
+
+        <section id="Schedule">
+
+            <h2> Generating Schedule... </h2>
+        
+        </section>
+
+        <section id="Tools">
+            <div class="tools-grid">
+        
+                <!-- GOOGLE CALENDAR CARD -->
+                <div class="tool-card">
+                    <div class="tool-content">
+                        <h2>Export to Google Calendar</h2>
+                        <p>Send your schedule directly to your Google Calendar.</p>
+                        <button class="tool-btn">Export</button>
+                    </div>
+                </div>
+        
+                <!-- SHARE PLAN CARD -->
+                <div class="tool-card">
+                    <div class="tool-content">
+                        <h2>Share Your Study Plan</h2>
+                        <p>Share your tasks and schedule with collaborators.</p>
+                        <button class="tool-btn">Share</button>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+        
+    </body>
+</html>
         
     </body>
 </html>
