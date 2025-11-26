@@ -39,7 +39,7 @@
         <li><a href="#Tasks">Tasks</a></li>
         <li><a href="#Schedule">Schedule</a></li>
         <li><a href="#Tools">Tools</a></li>
-        <li><a>Log Out</a></li>
+        <li><a href="login.html">Log Out</a></li>
       </ul>
     </ul>
   </div>
@@ -277,6 +277,54 @@
       selected.cells[3].textContent = data.weight + "%";
       selected.cells[4].textContent = data.difficulty;
     });
+
+// ---------- FRIEND REQUEST SYSTEM ----------
+
+// Containers
+const friendListContainer = document.querySelector(".friend-list");
+const friendRequestsContainer = document.querySelector(".friend-requests");
+const mutualSelect = document.querySelector(".friend-select.long-select");
+
+// Handle clicks on ANY accept/decline button inside friend-requests
+friendRequestsContainer.addEventListener("click", (event) => {
+  const button = event.target.closest("button");
+  if (!button) return; // clicked something else
+
+  const requestItem = button.closest(".request-item");
+  if (!requestItem) return;
+
+  const name = requestItem.querySelector(".friend-name").textContent;
+
+  // Decline
+  if (button.classList.contains("decline-btn")) {
+    requestItem.remove();
+    return;
+  }
+
+  // Accept (any non-decline button in request-buttons)
+  if (button.classList.contains("small-btn")) {
+    // Remove from requests
+    requestItem.remove();
+
+    // Add to Friend List
+    const newFriend = document.createElement("div");
+    newFriend.className = "friend-item";
+    newFriend.innerHTML = `
+      <span class="friend-name">${name}</span>
+      <button class="tool-btn small-btn">View</button>
+    `;
+    friendListContainer.appendChild(newFriend);
+
+    // Add to Mutual Free Time dropdown if not already there
+    const existingOptions = Array.from(mutualSelect.options).map(o => o.textContent);
+    if (!existingOptions.includes(name)) {
+      const option = document.createElement("option");
+      option.textContent = name;
+      mutualSelect.appendChild(option);
+    }
+  }
+});
+
   </script>
 
 </body>
