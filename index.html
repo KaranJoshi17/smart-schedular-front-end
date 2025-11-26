@@ -1,152 +1,283 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Prioritize </title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <style>
-            html 
-            {
-                scroll-behavior: smooth;
-            }
-            .menu 
-            {
-                position: fixed;
-                top: 0;
-                width: 100%;
-                background-color: black ;
-                padding: 10px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                z-index: 1000;
-                right: 0;
-            }
-            ul  
-            {
-                list-style-type: none;
-                display: flex;
-                gap: 20px;
-            }
-            section 
-            {
-                padding-top: 120px;
-                padding-bottom: 120px;
-                min-height: auto;
-            }
-        
-        </style>
-    </head>
-    <body>
-        <div class="menu">
-            <ul>
-                <li class="logo"><h1>Prioritize</h1></li>
-                <ul>
-                    <li><a href="#Home"> Home </a></li>
-                    <li><a href="#Tasks "> Tasks </a></li>
-                    <li><a href="#Schedule"> Schedule </a></li>
-                    <li><a href= "#Tools"> Tools </a></li>
-                    <li><a>Log Out</a></li>
-                </ul>
-            </ul>
+<head>
+  <title>Prioritize</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .menu {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: black;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+      right: 0;
+    }
+    ul {
+      list-style-type: none;
+      display: flex;
+      gap: 20px;
+    }
+    section {
+      padding-top: 120px;
+      padding-bottom: 120px;
+      min-height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <ul>
+      <li class="logo"><h1>Prioritize</h1></li>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Tasks">Tasks</a></li>
+        <li><a href="#Schedule">Schedule</a></li>
+        <li><a href="#Tools">Tools</a></li>
+        <li><a>Log Out</a></li>
+      </ul>
+    </ul>
+  </div>
+
+  <section id="Home">
+    <div class="hero">
+      <h1>Generate optimized study plans</h1>
+      <p>
+        Get personalized recommendations based on your deadlines, grade
+        weights, difficulty levels, and availability.
+      </p>
+    </div>
+  </section>
+
+  <section id="Tasks">
+    <div class="task-card">
+      <h2>User Task Management</h2>
+      <div class="task-button-row">
+        <button id="btn-create-task" class="create-task-button">+Create Task</button>
+        <button id="btn-delete-task" class="delete-task-button">-Delete Selected Tasks</button>
+        <button id="btn-edit-task" class="edit-task-button">Edit Selected Task</button>
+      </div>
+      <table id="taskTable" class="task-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Task</th>
+            <th>Deadline</th>
+            <th>Grade Weight</th>
+            <th>Difficulty</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- initial tasks -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>Assignment1</td>
+            <td>September 5</td>
+            <td>50%</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>Read Chapter 5</td>
+            <td>September 10</td>
+            <td>5%</td>
+            <td>Easy</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>Review Notes</td>
+            <td>September 15</td>
+            <td>15%</td>
+            <td>Hard</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="generate-container">
+        <a href="#Schedule" class="generate-link">
+          <button class="generate-btn">Generate Schedule</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="Schedule">
+    <h2>Generating Schedule...</h2>
+  </section>
+
+  <section id="Tools">
+    <div class="tools-grid">
+      <!-- GOOGLE CALENDAR CARD -->
+      <div class="tool-card">
+        <div class="tool-content">
+          <h2>Export to Google Calendar</h2>
+          <p>Send your schedule directly to your Google Calendar.</p>
+          <button class="tool-btn">Export</button>
         </div>
+      </div>
 
-        <section id="Home">
-            <div class="hero">
-                <h1>Generate optimized study plans</h1>
-                <p>
-                Get personalized recommendations based on your deadlines, grade
-                weights, difficulty levels, and availability.
-                </p>
-            </div> 
-            
-        </section>
+      <!-- FRIEND LIST -->
+      <div class="tool-card">
+        <div class="tool-content">
+            <h2>Friend List</h2>
+            <p>View your friends and check their study schedules.</p>
 
-        <section id="Tasks">
-            <div class="task-card">
-                <h2> User Task Management </h2>
-                <div class="task-button-row">
-                    <button class="create-task-button">+Create Task </button>
-                    <button class="delete-task-button">-Delete Task </button>
-                    <button class="edit-task-button">Edit Task</button> 
+            <div class="friend-list">
+                <div class="friend-item">
+                    <span class="friend-name">name1</span>
+                    <button class="tool-btn small-btn">View</button>
                 </div>
-                <table class="task-table">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Task</th>
-                            <th>Deadline</th>
-                            <th>Grade Weight</th>
-                            <th>Difficulty</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>Assignment1</td>
-                            <td>September 5</td>
-                            <td>50%</td>
-                            <td>Medium</td>
-                        </tr>
-                
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>Read Chapter 5</td>
-                            <td>September 10</td>
-                            <td>5%</td>
-                            <td>Easy</td>
-                        </tr>
-                
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>Review Notes</td>
-                            <td>September 15</td>
-                            <td>15%</td>
-                            <td>Hard</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="generate-container">
-                    <a href="#Schedule" class="generate-link">
-                        <button class="generate-btn">Generate Schedule</button>
-                    </a>
+
+                <div class="friend-item">
+                    <span class="friend-name">name2</span>
+                    <button class="tool-btn small-btn">View</button>
                 </div>
-                
+
+                <div class="friend-item">
+                    <span class="friend-name">name3</span>
+                    <button class="tool-btn small-btn">View</button>
+                </div>
             </div>
-            
-        </section>
+        </div>
+    </div>
 
-        <section id="Schedule">
+    <!-- FRIEND REQUESTS -->
+    <div class="tool-card">
+        <div class="tool-content">
+            <h2>Friend Requests</h2>
+            <p>Approve or decline new friend requests.</p>
 
-            <h2> Generating Schedule... </h2>
-        
-        </section>
-
-        <section id="Tools">
-            <div class="tools-grid">
-        
-                <!-- GOOGLE CALENDAR CARD -->
-                <div class="tool-card">
-                    <div class="tool-content">
-                        <h2>Export to Google Calendar</h2>
-                        <p>Send your schedule directly to your Google Calendar.</p>
-                        <button class="tool-btn">Export</button>
+            <div class="friend-requests">
+                <div class="request-item">
+                    <span class="friend-name">rq1</span>
+                    <div class="request-buttons">
+                        <button class="tool-btn small-btn">Accept</button>
+                        <button class="tool-btn small-btn decline-btn">Decline</button>
                     </div>
                 </div>
-        
-                <!-- SHARE PLAN CARD -->
-                <div class="tool-card">
-                    <div class="tool-content">
-                        <h2>Share Your Study Plan</h2>
-                        <p>Share your tasks and schedule with collaborators.</p>
-                        <button class="tool-btn">Share</button>
+
+                <div class="request-item">
+                    <span class="friend-name">rq2</span>
+                    <div class="request-buttons">
+                        <button class="tool-btn small-btn">Accept</button>
+                        <button class="tool-btn small-btn decline-btn">Decline</button>
                     </div>
                 </div>
-        
             </div>
-        </section>
-        
-    </body>
-</html>
-        
-    </body>
+        </div>
+    </div>
+
+    <!-- MUTUAL FREE TIME — FULL WIDTH -->
+    <div class="tool-card mutual-card">
+        <div class="mutual-container">
+
+            <!-- LEFT -->
+            <div class="mutual-left">
+                <h2>Mutual Free Time</h2>
+                <p>Select a friend to instantly compare free hours.</p>
+
+                <select class="friend-select long-select">
+                    <option>Select a friend</option>
+                    <option>name1</option>
+                    <option>name2</option>
+                    <option>name3</option>
+                </select>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="mutual-right">
+                <h3 class="mutual-title">Shared Free Hours</h3>
+                <div class="mutual-display">
+                    <p class="subtle-text">Mutual free hours will appear here.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  </section>
+
+  <script>
+    // Helper to prompt for task info
+    function promptTask(existing = {}) {
+      const task = prompt("Task name:", existing.task || "");
+      if (task === null) return null;  // canceled
+
+      const deadline = prompt("Deadline:", existing.deadline || "");
+      if (deadline === null) return null;
+
+      const weight = prompt("Grade weight (%):", existing.weight || "");
+      if (weight === null) return null;
+
+      const difficulty = prompt("Difficulty (Easy / Medium / Hard):", existing.difficulty || "");
+      if (difficulty === null) return null;
+
+      return { task, deadline, weight, difficulty };
+    }
+
+    const table = document.getElementById("taskTable").getElementsByTagName("tbody")[0];
+
+    document.getElementById("btn-create-task").addEventListener("click", () => {
+      const data = promptTask();
+      if (!data) return;
+
+      const row = table.insertRow();
+      const cell0 = row.insertCell(0);
+      const cell1 = row.insertCell(1);
+      const cell2 = row.insertCell(2);
+      const cell3 = row.insertCell(3);
+      const cell4 = row.insertCell(4);
+
+      cell0.innerHTML = '<input type="checkbox" />';
+      cell1.textContent = data.task;
+      cell2.textContent = data.deadline;
+      cell3.textContent = data.weight + "%";
+      cell4.textContent = data.difficulty;
+    });
+
+    document.getElementById("btn-delete-task").addEventListener("click", () => {
+        const rows = Array.from(table.rows);
+
+        rows.forEach((row) => {
+            const checkbox = row.cells[0].querySelector("input[type='checkbox']");
+            if (checkbox && checkbox.checked) {
+            table.deleteRow(row.rowIndex - 1); 
+            }
+        });
+    });
+
+
+    document.getElementById("btn-edit-task").addEventListener("click", () => {
+      // find first selected row
+      const rows = Array.from(table.rows);
+      const selected = rows.find(row => {
+        const checkbox = row.cells[0].querySelector("input[type='checkbox']");
+        return checkbox && checkbox.checked;
+      });
+      if (!selected) {
+        alert("Please select a task to edit (check the box).");
+        return;
+      }
+
+      const existing = {
+        task: selected.cells[1].textContent,
+        deadline: selected.cells[2].textContent,
+        weight: selected.cells[3].textContent.replace("%",""),
+        difficulty: selected.cells[4].textContent
+      };
+      const data = promptTask(existing);
+      if (!data) return;
+
+      selected.cells[1].textContent = data.task;
+      selected.cells[2].textContent = data.deadline;
+      selected.cells[3].textContent = data.weight + "%";
+      selected.cells[4].textContent = data.difficulty;
+    });
+  </script>
+
+</body>
 </html>
