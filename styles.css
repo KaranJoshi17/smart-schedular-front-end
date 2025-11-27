@@ -92,6 +92,10 @@ html {
     width: 100%;
 }
 
+#Home {
+    scroll-margin-top: 200px;
+}
+
 /* HERO SECTION */
 .hero {
     padding-top: 130px;
@@ -118,6 +122,10 @@ html {
 }
 
 /* TASK CARD (GLASSMORPHISM) */
+
+#Tasks {
+    scroll-margin-top: 100px;
+}
 .task-card {
     background: radial-gradient(circle at top left, rgba(59,130,246,0.12), transparent 55%),
                 rgba(15,15,20,0.92);
@@ -238,6 +246,10 @@ html {
 }
 
 /* SCHEDULE SECTION */
+
+#Schedule {
+    scroll-margin-top: 275px;
+}
 #Schedule h2 {
     font-size: 42px;
     text-align: center;
@@ -326,6 +338,26 @@ html {
 }
 
 .tool-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #4f46e5, #0ea5e9);
+    border-color: rgba(191,219,254,0.9);
+    box-shadow: 0 12px 34px rgba(37,99,235,0.8);
+}
+
+.tool-btn2 {
+    background: radial-gradient(circle at top, #4b5563, #111827);
+    color: #f9fafb;
+    border: 1px solid rgba(148,163,184,0.55);
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.7);
+    margin-top: 20px;
+}
+
+.tool-btn2:hover {
     transform: translateY(-2px);
     background: linear-gradient(135deg, #4f46e5, #0ea5e9);
     border-color: rgba(191,219,254,0.9);
@@ -480,5 +512,64 @@ html {
 }
 
 #Tools {
-    scroll-margin-top: -250px;
+    scroll-margin-top: -280px;
 }
+
+#timerDisplay {
+    color: #79d9ff;
+    text-shadow: 0 0 12px rgba(121,217,255,0.8);
+}
+
+#analyticsContainer div {
+    background: rgba(255,255,255,0.05);
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+#Productivity {
+    scroll-margin-top: -30px; /* ensures clean scroll position */
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/* Ensure Productivity cards follow same styling */
+#Productivity .tool-card {
+    margin-top: 40px;
+}
+
+/* Study Timer display */
+#timerDisplay {
+    font-size: 32px;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #79d9ff;
+    text-shadow: 0 0 12px rgba(121,217,255,0.8);
+}
+
+/* Analytics summary boxes */
+#taskSummary div,
+#daySummary div {
+    background: rgba(255,255,255,0.05);
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    margin-bottom: 8px;
+}
+
+/* Dropdown for analytics range */
+#analyticsRange {
+    max-width: 220px;
+}
+
+/* Force all Productivity cards to span full width */
+#Productivity .tool-card {
+    grid-column: 1 / 4 !important;
+}
+
+/* Fix grid behavior so Productivity cards do not break layout */
+.tools-grid section#Productivity {
+    grid-column: 1 / 4;
+    width: 100%;
+}
+

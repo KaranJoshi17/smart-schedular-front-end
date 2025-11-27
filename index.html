@@ -39,11 +39,13 @@
         <li><a href="#Tasks">Tasks</a></li>
         <li><a href="#Schedule">Schedule</a></li>
         <li><a href="#Tools">Tools</a></li>
+        <li><a href="#Productivity">Productivity</a></li>
         <li><a href="login.html">Log Out</a></li>
       </ul>
     </ul>
   </div>
 
+  <!-- HOME -->
   <section id="Home">
     <div class="hero">
       <h1>Generate optimized study plans</h1>
@@ -54,6 +56,7 @@
     </div>
   </section>
 
+  <!-- TASKS -->
   <section id="Tasks">
     <div class="task-card">
       <h2>User Task Management</h2>
@@ -106,106 +109,171 @@
     </div>
   </section>
 
+  <!-- SCHEDULE -->
   <section id="Schedule">
     <h2>Generating Schedule...</h2>
   </section>
 
+  <!-- TOOLS -->
   <section id="Tools">
     <div class="tools-grid">
       <!-- GOOGLE CALENDAR CARD -->
       <div class="tool-card">
         <div class="tool-content">
           <h2>Export to Google Calendar</h2>
-          <p>Send your schedule directly to your Google Calendar.</p>
-          <button class="tool-btn">Export</button>
+          <p>Send your schedule directly to your Google or Apple Calendar.</p>
+          <button class="tool-btn">Export to Google Calendar</button>
+          <button class="tool-btn2">Export to Apple Calendar</button>
         </div>
       </div>
 
       <!-- FRIEND LIST -->
       <div class="tool-card">
         <div class="tool-content">
-            <h2>Friend List</h2>
-            <p>View your friends and check their study schedules.</p>
+          <h2>Friend List</h2>
+          <p>View your friends and check their study schedules.</p>
 
-            <div class="friend-list">
-                <div class="friend-item">
-                    <span class="friend-name">name1</span>
-                    <button class="tool-btn small-btn">View</button>
-                </div>
-
-                <div class="friend-item">
-                    <span class="friend-name">name2</span>
-                    <button class="tool-btn small-btn">View</button>
-                </div>
-
-                <div class="friend-item">
-                    <span class="friend-name">name3</span>
-                    <button class="tool-btn small-btn">View</button>
-                </div>
+          <div class="friend-list">
+            <div class="friend-item">
+              <span class="friend-name">name1</span>
+              <button class="tool-btn small-btn">View</button>
             </div>
-        </div>
-    </div>
 
-    <!-- FRIEND REQUESTS -->
-    <div class="tool-card">
+            <div class="friend-item">
+              <span class="friend-name">name2</span>
+              <button class="tool-btn small-btn">View</button>
+            </div>
+
+            <div class="friend-item">
+              <span class="friend-name">name3</span>
+              <button class="tool-btn small-btn">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FRIEND REQUESTS -->
+      <div class="tool-card">
         <div class="tool-content">
-            <h2>Friend Requests</h2>
-            <p>Approve or decline new friend requests.</p>
+          <h2>Friend Requests</h2>
+          <p>Approve or decline new friend requests.</p>
 
-            <div class="friend-requests">
-                <div class="request-item">
-                    <span class="friend-name">rq1</span>
-                    <div class="request-buttons">
-                        <button class="tool-btn small-btn">Accept</button>
-                        <button class="tool-btn small-btn decline-btn">Decline</button>
-                    </div>
-                </div>
-
-                <div class="request-item">
-                    <span class="friend-name">rq2</span>
-                    <div class="request-buttons">
-                        <button class="tool-btn small-btn">Accept</button>
-                        <button class="tool-btn small-btn decline-btn">Decline</button>
-                    </div>
-                </div>
+          <div class="friend-requests">
+            <div class="request-item">
+              <span class="friend-name">rq1</span>
+              <div class="request-buttons">
+                <button class="tool-btn small-btn">Accept</button>
+                <button class="tool-btn small-btn decline-btn">Decline</button>
+              </div>
             </div>
-        </div>
-    </div>
 
-    <!-- MUTUAL FREE TIME — FULL WIDTH -->
-    <div class="tool-card mutual-card">
+            <div class="request-item">
+              <span class="friend-name">rq2</span>
+              <div class="request-buttons">
+                <button class="tool-btn small-btn">Accept</button>
+                <button class="tool-btn small-btn decline-btn">Decline</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MUTUAL FREE TIME — FULL WIDTH -->
+      <div class="tool-card mutual-card">
         <div class="mutual-container">
+          <!-- LEFT -->
+          <div class="mutual-left">
+            <h2>Mutual Free Time</h2>
+            <p>Select a friend to instantly compare free hours.</p>
 
-            <!-- LEFT -->
-            <div class="mutual-left">
-                <h2>Mutual Free Time</h2>
-                <p>Select a friend to instantly compare free hours.</p>
+            <select class="friend-select long-select">
+              <option>Select a friend</option>
+              <option>name1</option>
+              <option>name2</option>
+              <option>name3</option>
+            </select>
+          </div>
 
-                <select class="friend-select long-select">
-                    <option>Select a friend</option>
-                    <option>name1</option>
-                    <option>name2</option>
-                    <option>name3</option>
-                </select>
+          <!-- RIGHT -->
+          <div class="mutual-right">
+            <h3 class="mutual-title">Shared Free Hours</h3>
+            <div class="mutual-display">
+              <p class="subtle-text">Mutual free hours will appear here.</p>
             </div>
-
-            <!-- RIGHT -->
-            <div class="mutual-right">
-                <h3 class="mutual-title">Shared Free Hours</h3>
-                <div class="mutual-display">
-                    <p class="subtle-text">Mutual free hours will appear here.</p>
-                </div>
-            </div>
-
+          </div>
         </div>
-    </div>
+      </div>
+
+      <!-- STUDY TIMER — FULL WIDTH -->
+    <section id="Productivity">
+
+      <div class="tool-card" style="grid-column: 1 / 4;">
+        <div class="tool-content">
+          <h2>Study Timer</h2>
+          <p>Track how long you study each task in real time.</p>
+
+          <!-- Task selector (auto-populated from task table) -->
+          <select id="timerTaskSelect" class="friend-select long-select">
+            <option value="">Select a task to study</option>
+          </select>
+
+          <!-- Timer display -->
+          <div id="timerDisplay" style="font-size: 32px; margin-top: 20px; font-weight: 700; color: #79d9ff; text-shadow: 0 0 12px rgba(121,217,255,0.8);">
+            00:00:00
+          </div>
+
+          <!-- Timer buttons -->
+          <div style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <button id="startTimer" class="tool-btn">Start</button>
+            <button id="pauseTimer" class="tool-btn">Pause</button>
+            <button id="stopTimer" class="tool-btn decline-btn">Stop</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANALYTICS DASHBOARD — FULL WIDTH -->
+      <div class="tool-card" style="grid-column: 1 / 4;">
+        <div class="tool-content">
+          <h2>Study Analytics</h2>
+          <p>Your logged study hours across tasks.</p>
+
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap; margin-top:10px;">
+            <div>
+              <div style="font-size:14px; margin-bottom:4px;">Range</div>
+              <select id="analyticsRange" class="friend-select long-select" style="max-width:220px;">
+                <option value="7">Last 7 days</option>
+                <option value="30">Last 30 days</option>
+                <option value="all">All time</option>
+              </select>
+            </div>
+            <div id="totalHoursSummary" style="font-weight:600; font-size:15px;"></div>
+          </div>
+
+          <div style="margin-top:18px;">
+            <h3 class="mutual-title">Hours per Task</h3>
+            <div id="taskSummary"></div>
+          </div>
+
+          <div style="margin-top:18px;">
+            <h3 class="mutual-title">Breakdown by Day</h3>
+            <div id="daySummary"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+      
+
+    </div> <!-- end tools-grid -->
   </section>
 
   <script>
-    // Helper to prompt for task info
+    // -------------------------------
+    // TASK TABLE: CREATE / EDIT / DELETE
+    // -------------------------------
     function promptTask(existing = {}) {
       const task = prompt("Task name:", existing.task || "");
-      if (task === null) return null;  // canceled
+      if (task === null) return null;
 
       const deadline = prompt("Deadline:", existing.deadline || "");
       if (deadline === null) return null;
@@ -219,13 +287,13 @@
       return { task, deadline, weight, difficulty };
     }
 
-    const table = document.getElementById("taskTable").getElementsByTagName("tbody")[0];
+    const tableBody = document.getElementById("taskTable").getElementsByTagName("tbody")[0];
 
     document.getElementById("btn-create-task").addEventListener("click", () => {
       const data = promptTask();
       if (!data) return;
 
-      const row = table.insertRow();
+      const row = tableBody.insertRow();
       const cell0 = row.insertCell(0);
       const cell1 = row.insertCell(1);
       const cell2 = row.insertCell(2);
@@ -240,24 +308,22 @@
     });
 
     document.getElementById("btn-delete-task").addEventListener("click", () => {
-        const rows = Array.from(table.rows);
-
-        rows.forEach((row) => {
-            const checkbox = row.cells[0].querySelector("input[type='checkbox']");
-            if (checkbox && checkbox.checked) {
-            table.deleteRow(row.rowIndex - 1); 
-            }
-        });
+      const rows = Array.from(tableBody.rows);
+      rows.forEach((row) => {
+        const checkbox = row.cells[0].querySelector("input[type='checkbox']");
+        if (checkbox && checkbox.checked) {
+          tableBody.deleteRow(row.rowIndex - 1);
+        }
+      });
     });
 
-
     document.getElementById("btn-edit-task").addEventListener("click", () => {
-      // find first selected row
-      const rows = Array.from(table.rows);
+      const rows = Array.from(tableBody.rows);
       const selected = rows.find(row => {
         const checkbox = row.cells[0].querySelector("input[type='checkbox']");
         return checkbox && checkbox.checked;
       });
+
       if (!selected) {
         alert("Please select a task to edit (check the box).");
         return;
@@ -278,53 +344,252 @@
       selected.cells[4].textContent = data.difficulty;
     });
 
-// ---------- FRIEND REQUEST SYSTEM ----------
+    // -------------------------------
+    // FRIEND REQUEST SYSTEM
+    // -------------------------------
+    const friendListContainer = document.querySelector(".friend-list");
+    const friendRequestsContainer = document.querySelector(".friend-requests");
+    const mutualSelect = document.querySelector(".friend-select.long-select");
 
-// Containers
-const friendListContainer = document.querySelector(".friend-list");
-const friendRequestsContainer = document.querySelector(".friend-requests");
-const mutualSelect = document.querySelector(".friend-select.long-select");
+    if (friendRequestsContainer) {
+      friendRequestsContainer.addEventListener("click", (event) => {
+        const button = event.target.closest("button");
+        if (!button) return;
 
-// Handle clicks on ANY accept/decline button inside friend-requests
-friendRequestsContainer.addEventListener("click", (event) => {
-  const button = event.target.closest("button");
-  if (!button) return; // clicked something else
+        const requestItem = button.closest(".request-item");
+        if (!requestItem) return;
 
-  const requestItem = button.closest(".request-item");
-  if (!requestItem) return;
+        const name = requestItem.querySelector(".friend-name").textContent;
 
-  const name = requestItem.querySelector(".friend-name").textContent;
+        // Decline
+        if (button.classList.contains("decline-btn")) {
+          requestItem.remove();
+          return;
+        }
 
-  // Decline
-  if (button.classList.contains("decline-btn")) {
-    requestItem.remove();
-    return;
-  }
+        // Accept
+        if (button.classList.contains("small-btn")) {
+          requestItem.remove();
 
-  // Accept (any non-decline button in request-buttons)
-  if (button.classList.contains("small-btn")) {
-    // Remove from requests
-    requestItem.remove();
+          // Add to Friend List
+          if (friendListContainer) {
+            const newFriend = document.createElement("div");
+            newFriend.className = "friend-item";
+            newFriend.innerHTML = `
+              <span class="friend-name">${name}</span>
+              <button class="tool-btn small-btn">View</button>
+            `;
+            friendListContainer.appendChild(newFriend);
+          }
 
-    // Add to Friend List
-    const newFriend = document.createElement("div");
-    newFriend.className = "friend-item";
-    newFriend.innerHTML = `
-      <span class="friend-name">${name}</span>
-      <button class="tool-btn small-btn">View</button>
-    `;
-    friendListContainer.appendChild(newFriend);
-
-    // Add to Mutual Free Time dropdown if not already there
-    const existingOptions = Array.from(mutualSelect.options).map(o => o.textContent);
-    if (!existingOptions.includes(name)) {
-      const option = document.createElement("option");
-      option.textContent = name;
-      mutualSelect.appendChild(option);
+          // Add to Mutual Free Time dropdown if not already there
+          if (mutualSelect) {
+            const existingOptions = Array.from(mutualSelect.options).map(o => o.textContent);
+            if (!existingOptions.includes(name)) {
+              const option = document.createElement("option");
+              option.textContent = name;
+              mutualSelect.appendChild(option);
+            }
+          }
+        }
+      });
     }
-  }
-});
 
+    // -------------------------------
+    // STUDY TIMER + ANALYTICS
+    // Load tasks into timer dropdown from task table
+    function loadTasksIntoDropdown() {
+      const dropdown = document.getElementById("timerTaskSelect");
+      if (!dropdown) return;
+
+      dropdown.innerHTML = '<option value="">Select a task to study</option>';
+
+      const rows = document.querySelectorAll("#taskTable tbody tr");
+      rows.forEach(row => {
+        const taskName = row.cells[1].textContent.trim();
+        if (!taskName) return;
+        const opt = document.createElement("option");
+        opt.value = taskName;
+        opt.textContent = taskName;
+        dropdown.appendChild(opt);
+      });
+    }
+
+    loadTasksIntoDropdown();
+
+    // Observe task table changes to keep dropdown in sync
+    const taskBody = document.querySelector("#taskTable tbody");
+    if (taskBody && "MutationObserver" in window) {
+      const observer = new MutationObserver(loadTasksIntoDropdown);
+      observer.observe(taskBody, { childList: true });
+    }
+
+    // Timer variables
+    let timerInterval = null;
+    let elapsedSeconds = 0;
+    let currentTask = null;
+    let isPaused = false;
+
+    function updateTimerDisplay() {
+      const hrs = String(Math.floor(elapsedSeconds / 3600)).padStart(2, "0");
+      const mins = String(Math.floor((elapsedSeconds % 3600) / 60)).padStart(2, "0");
+      const secs = String(elapsedSeconds % 60).padStart(2, "0");
+      document.getElementById("timerDisplay").textContent = `${hrs}:${mins}:${secs}`;
+    }
+
+    function saveStudySession(task, seconds) {
+      const existing = JSON.parse(localStorage.getItem("studySessions") || "[]");
+      existing.push({
+        task,
+        seconds,
+        timestamp: new Date().toISOString()
+      });
+      localStorage.setItem("studySessions", JSON.stringify(existing));
+    }
+
+    // Start timer
+    document.getElementById("startTimer").addEventListener("click", () => {
+      const dropdown = document.getElementById("timerTaskSelect");
+      const selectedTask = dropdown.value;
+
+      if (!selectedTask) {
+        alert("Please select a task to study.");
+        return;
+      }
+
+      // If starting fresh or switching tasks
+      if (!currentTask || currentTask !== selectedTask || !isPaused) {
+        currentTask = selectedTask;
+        if (!isPaused) elapsedSeconds = 0;
+      }
+
+      if (!timerInterval) {
+        isPaused = false;
+        timerInterval = setInterval(() => {
+          elapsedSeconds++;
+          updateTimerDisplay();
+        }, 1000);
+      }
+    });
+
+    // Pause timer
+    document.getElementById("pauseTimer").addEventListener("click", () => {
+      if (!timerInterval) return;
+      clearInterval(timerInterval);
+      timerInterval = null;
+      isPaused = true;
+    });
+
+    // Stop timer and save data
+    document.getElementById("stopTimer").addEventListener("click", () => {
+      if (!currentTask || elapsedSeconds === 0) {
+        // nothing to save
+        elapsedSeconds = 0;
+        updateTimerDisplay();
+        currentTask = null;
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+        isPaused = false;
+        return;
+      }
+
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+
+      saveStudySession(currentTask, elapsedSeconds);
+
+      elapsedSeconds = 0;
+      updateTimerDisplay();
+      currentTask = null;
+      isPaused = false;
+
+      loadAnalytics();
+    });
+
+    // Analytics
+    function loadAnalytics() {
+      const sessions = JSON.parse(localStorage.getItem("studySessions") || "[]");
+      const range = document.getElementById("analyticsRange").value;
+
+      let fromDate = null;
+      if (range !== "all") {
+        const days = parseInt(range, 10);
+        fromDate = new Date();
+        fromDate.setHours(0, 0, 0, 0);
+        fromDate.setDate(fromDate.getDate() - (days - 1));
+      }
+
+      const filtered = sessions.filter(s => {
+        if (!fromDate) return true;
+        const d = new Date(s.timestamp);
+        return d >= fromDate;
+      });
+
+      const perTask = {};
+      const perDay = {};
+      let totalSeconds = 0;
+
+      filtered.forEach(s => {
+        totalSeconds += s.seconds;
+        const hours = s.seconds / 3600;
+
+        perTask[s.task] = (perTask[s.task] || 0) + hours;
+
+        const dateStr = s.timestamp.slice(0, 10); // YYYY-MM-DD
+        perDay[dateStr] = (perDay[dateStr] || 0) + hours;
+      });
+
+      // Total summary
+      const totalHoursSummary = document.getElementById("totalHoursSummary");
+      totalHoursSummary.textContent = `Total hours studied in range: ${ (totalSeconds/3600).toFixed(2) } hrs`;
+
+      // Task summary
+      const taskSummary = document.getElementById("taskSummary");
+      taskSummary.innerHTML = "";
+
+      if (Object.keys(perTask).length === 0) {
+        taskSummary.innerHTML = '<div class="subtle-text">No study sessions logged yet.</div>';
+      } else {
+        Object.entries(perTask).forEach(([task, hrs]) => {
+          const row = document.createElement("div");
+          row.style.background = "rgba(255,255,255,0.05)";
+          row.style.padding = "10px 14px";
+          row.style.borderRadius = "12px";
+          row.style.border = "1px solid rgba(255,255,255,0.12)";
+          row.style.marginBottom = "8px";
+          row.innerHTML = `<strong>${task}:</strong> ${hrs.toFixed(2)} hrs`;
+          taskSummary.appendChild(row);
+        });
+      }
+
+      // Day breakdown
+      const daySummary = document.getElementById("daySummary");
+      daySummary.innerHTML = "";
+
+      if (Object.keys(perDay).length === 0) {
+        daySummary.innerHTML = '<div class="subtle-text">No daily data to show.</div>';
+      } else {
+        const sortedDates = Object.keys(perDay).sort();
+        sortedDates.forEach(dateStr => {
+          const hrs = perDay[dateStr];
+          const row = document.createElement("div");
+          row.style.background = "rgba(255,255,255,0.05)";
+          row.style.padding = "10px 14px";
+          row.style.borderRadius = "12px";
+          row.style.border = "1px solid rgba(255,255,255,0.12)";
+          row.style.marginBottom = "8px";
+          row.innerHTML = `<strong>${dateStr}:</strong> ${hrs.toFixed(2)} hrs`;
+          daySummary.appendChild(row);
+        });
+      }
+    }
+
+    document.getElementById("analyticsRange").addEventListener("change", loadAnalytics);
+    loadAnalytics();
   </script>
 
 </body>
